@@ -6,13 +6,12 @@
 /*   By: rnorvene <rnorvene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:11:41 by rnorvene          #+#    #+#             */
-/*   Updated: 2024/11/20 19:16:08 by rnorvene         ###   ########.fr       */
+/*   Updated: 2024/11/21 16:05:41 by rnorvene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "stdarg.h"
-#include <unistd.h>
 
 void	fonction_qui_cherche(char zob, va_list, int *n)
 {
@@ -22,7 +21,7 @@ void	fonction_qui_cherche(char zob, va_list, int *n)
 	else if (zob + 1 == 's')
 		ft_putstr((va_list, int), n);
 	else if (zob + 1 == 'p')
-		
+		ft_putptr((va_list, int), n);
 	else if (zob + 1 == 'd')
 		ft_putnbr((va_list, int), n);
 	else if (zob + 1 == 'i')
@@ -34,7 +33,7 @@ void	fonction_qui_cherche(char zob, va_list, int *n)
 	else if (zob + 1 == 'X')
 		ft_puthexa((va_list, int), n);
 	else if (zob + 1 == '%')
-		write(1, '%', 1);
+		ft_putchar(zob, n);
 }
 
 int	ft_printf(const char *format, ...)
