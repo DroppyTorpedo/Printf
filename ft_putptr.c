@@ -6,7 +6,7 @@
 /*   By: rnorvene <rnorvene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 19:07:46 by rnorvene          #+#    #+#             */
-/*   Updated: 2024/11/21 16:04:28 by rnorvene         ###   ########.fr       */
+/*   Updated: 2024/11/26 16:52:35 by rnorvene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	ft_putptr(void *ptr, int *count)
 {
 	unsigned long long	adress;
-	char	*hex_digits;
-	char	buffer[16];
-	int	i;
+	char				*hex_digits;
+	char				buffer[16];
+	int					i;
 
 	hex_digits = "0123456789abcdef";
 	adress = (unsigned long long)ptr;

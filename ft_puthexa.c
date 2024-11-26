@@ -6,7 +6,7 @@
 /*   By: rnorvene <rnorvene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 18:36:09 by rnorvene          #+#    #+#             */
-/*   Updated: 2024/11/20 19:02:05 by rnorvene         ###   ########.fr       */
+/*   Updated: 2024/11/26 16:43:04 by rnorvene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,14 @@ void	ft_puthexa_non_formel(char n, int *count, unsigned int num)
 
 	if (n == "x")
 	{
-		hex_digits = "0123456789abcdef"
+		hex_digits = "0123456789abcdef";
 	}
 	else if (n == "X")
 	{
-		hex_digits = "0123456789ABCDEF"
+		hex_digits = "0123456789ABCDEF";
 	}
 	if (n >= 16)
-	{
-		ft_puthexa_non_formel(num/16, count, n);
-	}
+		ft_puthexa_non_formel(num / 16, count, n);
 	ft_putchar(hex_digits[num % 16], count);
 }
 

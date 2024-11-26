@@ -6,7 +6,7 @@
 /*   By: rnorvene <rnorvene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:55:32 by rnorvene          #+#    #+#             */
-/*   Updated: 2024/11/18 17:43:14 by rnorvene         ###   ########.fr       */
+/*   Updated: 2024/11/26 16:44:14 by rnorvene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ void	ft_putnbr(int nb, int *count)
 		ft_putnbr(num / 10, count);
 	}
 	ft_putchar(num % 10 + 48, count);
-		(*count)++;
+	(*count)++;
 }
