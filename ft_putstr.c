@@ -6,7 +6,7 @@
 /*   By: rnorvene <rnorvene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:57:53 by rnorvene          #+#    #+#             */
-/*   Updated: 2024/11/26 16:44:53 by rnorvene         ###   ########.fr       */
+/*   Updated: 2024/11/29 17:04:26 by rnorvene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@ void	ft_putstr(char *s, int *count)
 {
 	int	i;
 
+	if (s == NULL)
+		s = "(null)";
 	i = 0;
 	while (s[i])
 	{
-		ft_putchar(1, &s[i], 1);
-		i++;
+		write(1, &s[i], 1);
 		(*count)++;
+		i++;
 	}
 }

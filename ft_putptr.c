@@ -6,11 +6,11 @@
 /*   By: rnorvene <rnorvene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 19:07:46 by rnorvene          #+#    #+#             */
-/*   Updated: 2024/11/26 16:52:35 by rnorvene         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:52:59 by rnorvene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_putptr(void *ptr, int *count)
 {
@@ -29,7 +29,7 @@ void	ft_putptr(void *ptr, int *count)
 	ft_putstr("0x", count);
 	if (adress == 0)
 	{
-		ft_putchar('0', count);
+		ft_putchar('\0', count);
 		return ;
 	}
 	i = 0;

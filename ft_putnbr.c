@@ -6,7 +6,7 @@
 /*   By: rnorvene <rnorvene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:55:32 by rnorvene          #+#    #+#             */
-/*   Updated: 2024/11/26 16:44:14 by rnorvene         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:45:07 by rnorvene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putnbr(int nb, int *count)
 
 	if (nb == -2147483648)
 	{
-		ft_putstr_sp("-2147483648", count);
+		ft_putstr("-2147483648", count);
 		return ;
 	}
 	if (nb < 0)
