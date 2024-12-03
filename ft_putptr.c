@@ -6,7 +6,7 @@
 /*   By: rnorvene <rnorvene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 19:07:46 by rnorvene          #+#    #+#             */
-/*   Updated: 2024/11/29 16:52:59 by rnorvene         ###   ########.fr       */
+/*   Updated: 2024/12/03 15:52:08 by rnorvene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,10 @@ void	ft_putptr(void *ptr, int *count)
 	adress = (unsigned long long)ptr;
 	if (adress == 0)
 	{
-		ft_putstr("Nothing in Location", count);
+		ft_putstr("0x0", count);
 		return ;
 	}
 	ft_putstr("0x", count);
-	if (adress == 0)
-	{
-		ft_putchar('\0', count);
-		return ;
-	}
 	i = 0;
 	while (adress > 0)
 	{

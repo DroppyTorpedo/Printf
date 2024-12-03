@@ -6,7 +6,7 @@
 /*   By: rnorvene <rnorvene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 17:11:15 by rnorvene          #+#    #+#             */
-/*   Updated: 2024/11/26 16:46:51 by rnorvene         ###   ########.fr       */
+/*   Updated: 2024/12/03 17:28:25 by rnorvene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 void	ft_putnbr_unsigned(unsigned int nb, int *count)
 {
-	unsigned int	num;
-
-	num = (unsigned int)nb;
-	if (num >= 10)
+	if (nb >= 10)
 	{
-		ft_putnbr_unsigned(num / 10, count);
+		ft_putnbr_unsigned(nb / 10, count);
 	}
-	(*count)++;
-	ft_putchar(num % 10 + 48, count);
+	ft_putchar((nb % 10) + 48, count);
 }

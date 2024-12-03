@@ -6,7 +6,7 @@
 /*   By: rnorvene <rnorvene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:11:41 by rnorvene          #+#    #+#             */
-/*   Updated: 2024/11/29 16:44:23 by rnorvene         ###   ########.fr       */
+/*   Updated: 2024/12/03 15:46:28 by rnorvene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,23 @@
 
 void	fonction_qui_cherche(char zob, va_list va, int *n)
 {
-	zob = '%';
-	if (zob + 1 == 'c')
+	if (zob == 'c')
 		ft_putchar(va_arg(va, int), n);
-	else if (zob + 1 == 's')
+	else if (zob == 's')
 		ft_putstr(va_arg(va, char *), n);
-	else if (zob + 1 == 'p')
+	else if (zob == 'p')
 		ft_putptr(va_arg(va, void *), n);
-	else if (zob + 1 == 'd')
+	else if (zob == 'd')
 		ft_putnbr(va_arg(va, int), n);
-	else if (zob + 1 == 'i')
+	else if (zob == 'i')
 		ft_putnbr(va_arg(va, int), n);
-	else if (zob + 1 == 'u')
+	else if (zob == 'u')
 		ft_putnbr_unsigned(va_arg(va, int), n);
-	else if (zob + 1 == 'x')
+	else if (zob == 'x')
 		ft_puthexa(va_arg(va, unsigned int), n, zob);
-	else if (zob + 1 == 'X')
+	else if (zob == 'X')
 		ft_puthexa(va_arg(va, unsigned int), n, zob);
-	else if (zob + 1 == '%')
+	else if (zob == '%')
 		ft_putchar(zob, n);
 }
 
@@ -46,12 +45,12 @@ int	ft_printf(const char *format, ...)
 	va_start(args, format);
 	while (format[i])
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			i++;
 			fonction_qui_cherche(format[i], args, &count);
 		}
-		else
+		else if (format[i] != '%')
 		{
 			ft_putchar(format[i], &count);
 		}
