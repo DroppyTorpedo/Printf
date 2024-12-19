@@ -6,7 +6,7 @@
 /*   By: rnorvene <rnorvene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 15:59:06 by rnorvene          #+#    #+#             */
-/*   Updated: 2024/11/29 17:18:19 by rnorvene         ###   ########.fr       */
+/*   Updated: 2024/12/04 15:06:30 by rnorvene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	ft_putnbr(int nb, int *count);
 void	ft_putnbr_unsigned(unsigned int num, int *count);
 void	ft_putptr(void *ptr, int *count);
 void	ft_putstr(char *s, int *count);
-int	ft_puthexa(unsigned int num, int *count, char n);
+int		ft_puthexa(unsigned int num, int *count, char n);
 
 #endif

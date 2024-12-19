@@ -6,7 +6,7 @@
 /*   By: rnorvene <rnorvene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:11:41 by rnorvene          #+#    #+#             */
-/*   Updated: 2024/12/03 15:46:28 by rnorvene         ###   ########.fr       */
+/*   Updated: 2024/12/04 15:07:01 by rnorvene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ void	fonction_qui_cherche(char zob, va_list va, int *n)
 
 int	ft_printf(const char *format, ...)
 {
-	int	i;
-	int	count;
+	int		i;
+	int		count;
+	va_list	args;
 
 	i = 0;
-	va_list args;
 	va_start(args, format);
 	while (format[i])
 	{
