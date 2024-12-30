@@ -6,7 +6,7 @@
 /*   By: rnorvene <rnorvene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:55:32 by rnorvene          #+#    #+#             */
-/*   Updated: 2024/12/03 17:15:15 by rnorvene         ###   ########.fr       */
+/*   Updated: 2024/12/24 15:49:41 by rnorvene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_putnbr(int nb, int *count)
 {
-	unsigned int	num;
-
 	if (nb == -2147483648)
 	{
 		ft_putstr("-2147483648", count);
@@ -24,15 +22,14 @@ void	ft_putnbr(int nb, int *count)
 	if (nb < 0)
 	{
 		ft_putchar('-', count);
-		num = (unsigned int)(-nb);
+		ft_putnbr(-nb, count);
 	}
 	else
 	{
-		num = (unsigned int)nb;
+		if (nb > 9)
+		{
+			ft_putnbr((nb / 10), count);
+		}
+		ft_putchar(('0' + nb % 10), count);
 	}
-	if (num >= 10)
-	{
-		ft_putnbr(num / 10, count);
-	}
-	ft_putchar(num % 10 + 48, count);
 }
